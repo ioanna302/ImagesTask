@@ -1,0 +1,35 @@
+﻿@model IEnumerable<ImagesApp.Models.ImageViewModel>
+@{
+    ViewData["Title"] = "Images";
+}
+
+<h1>@ViewData["Title"]</h1>
+@if(Model!=null && Model.Count()!=0)
+{
+    <ul style="list-style:none;" class="row">
+    @foreach (var item in Model)
+    {
+        <li class="col-md-3">
+            <br />
+            <a data-fancybox="gallery" data-caption="@item.Name">
+                <img class="img" src=@item.ImagePath style="width:100%;height:180px;" />
+            </a>
+            <br />
+            <label><b>@item.Name</b></label>
+
+            <a  href="@Url.Action("Delete", "Images", new {  Id= item.Id })">Delete</a>
+            <br />
+            <p>@item.Description</p>
+
+            <br />
+            <br />
+        </li>
+    }
+    </ul>
+
+}
+else
+{
+    <h3>Gallery is empty :(</h3>
+    <div>Upload a new picture to view it here.</div>
+}

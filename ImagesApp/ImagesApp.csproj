@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>5522eed3-1b11-4b87-8270-4f02c55ddcb9</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+	  <PackageReference Include="AutoMapper" Version="11.0.0">
+		  <TreatAsUsed>true</TreatAsUsed>
+	  </PackageReference>
+	  <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+	  <PackageReference Include="MediatR" Version="10.0.0" />
+	  <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.0" />
+	  <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor" Version="2.2.0" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.4" />  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Core\ImagesTask.Core.csproj" />
+    <ProjectReference Include="..\Infrastructure\ImagesTask.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
