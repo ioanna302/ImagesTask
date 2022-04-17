@@ -1,4 +1,4 @@
-# OrderezeTask
+# ImagesTask
 Web application for viewing, adding, and deleting images. It is loosely based on clean architecture and consists of 3 projects, Core, Infrastructure and App(UI). The communication between the projects happends only via Core's interfaces.
 ## App
 ASP.net 6.0 MVC. References Core and Infrastructure. (Infrastructure is used only for Dependency Injection)
@@ -27,7 +27,7 @@ Contains implementation of Core interfaces related to data. It references Core. 
 - EntityFrameworkCore.SqlServer.
 
 # Requires
-- Azurite or Azure Blob Storage, with a public container (settings must be inserted at appsetings.json)
-- Database at SQLServer that implements the image entity. (settings must also be inserted at appsetings.json)
+- Azurite or Azure Blob Storage (settings must be inserted at appsetings.json)
+- Database at SQLServer (settings must also be inserted at appsetings.json)
 
 
